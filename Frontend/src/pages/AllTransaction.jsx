@@ -13,7 +13,7 @@ const AllTransaction = () => {
     const [showTransaction, setShowTransaction] = useState(false)
     const [selectedTransaction, setSelectedTransaction] = useState(null)
     const [loading, setLoading] = useState(false)
-    const url = 'http://localhost:7500/transaction/transactions'
+    const url = 'https://demotbank-app-1.onrender.com/transaction/transactions'
     useEffect(()=> {
         setLoading(true)
         console.log(currentUserId);

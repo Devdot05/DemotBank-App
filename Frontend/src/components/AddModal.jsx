@@ -2,7 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 
 const AddModal = ({show, onClose, account}) => {
-  const credential = "http://localhost:7500/me"
+  const credential = "https://demotbank-app-1.onrender.com/me"
   const [details, setDetails] = useState([])
   const [user, setUser] = useState([])
   useEffect(()=>{

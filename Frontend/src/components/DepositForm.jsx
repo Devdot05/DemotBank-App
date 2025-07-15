@@ -35,7 +35,7 @@ const DepositForm = ({ toAccountNumber, onTransactionComplete, onClose }) => {
       }
       console.log(payload);
       
-      const res = await axios.post('http://localhost:7500/transaction/deposit', payload, {
+      const res = await axios.post('https://demotbank-app-1.onrender.com/transaction/deposit', payload, {
         withCredentials: true
       }
         );

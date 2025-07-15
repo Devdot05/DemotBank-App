@@ -22,7 +22,7 @@ const WithdrawForm = ({ fromAccountNumber, onTransactionComplete, onClose }) => 
   const handleWithdraw = async () => {
     setLoading(true);
     try {
-      await axios.post('http://localhost:7500/transaction/withdraw', 
+      await axios.post('https://demotbank-app-1.onrender.com/transaction/withdraw', 
         {
           userId,
           fromAccountNumber,

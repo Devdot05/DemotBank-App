@@ -12,7 +12,7 @@ const UserLogin = () => {
     const [message, setMessage] = useState('')
     const [loading, setLoading] = useState(false)
     const navigate = useNavigate()
-    const login_url = "http://localhost:7500/login"
+    const login_url = "https://demotbank-app-1.onrender.com/login"
 
     const user = JSON.parse(localStorage.getItem('users'))
     console.log(user);

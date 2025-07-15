@@ -16,7 +16,7 @@ import TransactionHistory from '../components/TransactionHistory'
 import Nav from '../components/Nav'
 
 const Dashboard = () => {
-  const credential = "http://localhost:7500/me"
+  const credential = "https://demotbank-app-1.onrender.com/me"
 
   const {id} = useParams()
   const navigate = useNavigate()
@@ -99,7 +99,7 @@ const Dashboard = () => {
 
   const fetchRecentTransaction = () => {
     setLoading(true)
-    axios.get(`http://localhost:7500/transaction/recent`, {withCredentials: true})
+    axios.get(`https://demotbank-app-1.onrender.com/transaction/recent`, {withCredentials: true})
     .then((res)=> {
       console.log(res);
       setTimeout(() => {

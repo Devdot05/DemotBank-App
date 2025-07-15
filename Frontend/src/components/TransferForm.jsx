@@ -29,7 +29,7 @@ const TransferForm = ({ fromAccountNumber, onTransactionComplete, onClose }) => 
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await axios.get(`http://localhost:7500/account/verify/${formData.toAccountNumber}`);
+      const res = await axios.get(`https://demotbank-app-1.onrender.com/account/verify/${formData.toAccountNumber}`);
       setRecipientName(res.data.fullName);
       setStep('confirm');
       console.log(res);
