@@ -9,7 +9,7 @@ const router = require('./Controller/verify.controller');
 const transactionRouter = require('./Routes/transaction.route');
 
 app.use(cors({
-  origin: ["http://localhost:5173",],  
+  origin: ["https://demot-bank-app-dot.vercel.app/","http://localhost:5173",],  
   credentials: true
 }));
 app.use(express.json())
