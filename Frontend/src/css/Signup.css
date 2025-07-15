@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.background{
+    /* background-image:linear-gradient(rgba(188, 61, 61, 0.5), url("public/bg 1.jpeg")); */
+    background-image: linear-gradient(rgba(23, 15, 93, 0.68) , rgba(9, 6, 101, 0.3)), url("images/bg 1.jpeg");
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px 0px;
+    /* height: 100vh; */
+
+}
+
+.background2{
+    /* background-image:linear-gradient(rgba(188, 61, 61, 0.5), url("public/bg 1.jpeg")); */
+    background-image: linear-gradient(rgba(23, 15, 93, 0.68) , rgba(9, 6, 101, 0.3)), url("images/bg 1.jpeg");
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 0px;
+    /* height: 100vh; */
+
+}
+
+
+.row{
+    
+    background-color: white;
+
+}
+
+ 
+
+.bg{
+    padding: 20px 10px;
+    background-image: url("images/bg 2.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 20px;
+}
+
+.bg-2{
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 200px 50px;
+    color: white;
+}
+
+.form{
+    height: 95vh;
+    overflow-y: auto;
+}
+
+.bg-col{
+    background-color: rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(10px);
+}
+
+@media (max-width:460px) {
+    
+.background2{
+    padding: 150px 0px;
+    height: 100vh;
+
+}
+}

@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sec_dash{
+    padding:50px  0 0 300px;
+}
+
+.sidb{
+     transition: move transform 0.3s ease-in-out;
+}
+
+.mbtn{
+    padding-right:16px ;
+}
+
+@keyframes move {
+    0%{
+        transform: translateX(0);
+        animation-delay: 1.5ms;
+    }
+    100%{
+        transform: translateX(50px);
+        animation-delay: 1.5ms;
+
+    }
+
+}
+
+@media (max-width: 990px) {
+    .sec_dash{
+        padding:50px  20px 0 230px;
+    }
+}
