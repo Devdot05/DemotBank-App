@@ -82,7 +82,7 @@ const login = (req, res) => {
                         res.cookie("token", token, {
                             httpOnly: true,
                             secure: true,        
-                            sameSite: "Lax",
+                            sameSite: "None",
                             maxAge: 3600000     
                         });
 
