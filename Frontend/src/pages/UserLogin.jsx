@@ -10,14 +10,16 @@ import {useNavigate} from "react-router-dom"
 const UserLogin = () => {
     const [profile, setProfile] = useState("")
     const [message, setMessage] = useState('')
-    const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(false)  
+    const [currentUserId, setCurrentUserId] = useState(null)
+    
     const navigate = useNavigate()
     const login_url = "https://demotbank-app-1.onrender.com/login"
 
     const user = JSON.parse(localStorage.getItem('users'))
     console.log(user);
     
-    const userId = user.userId
+    // const userId = user.userId
     const formik = useFormik({
         initialValues: {
             email: '',
@@ -42,12 +44,13 @@ const UserLogin = () => {
                         phone_number: res.data.user.phoneNumber,
                         userId: res.data.user.id 
                     }
+                    setCurrentUserId(res.data.user.id)
 
                     localStorage.setItem('users', JSON.stringify(user))
                     
                     setProfile(res.data.user.fullName)
                     setTimeout(() => {
-                        navigate(`/dashboard/${userId}`)
+                        navigate(`/dashboard/${currentUserId}`)
                         setLoading(false)
                         
                     }, 1000);
