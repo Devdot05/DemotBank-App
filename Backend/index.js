@@ -22,7 +22,13 @@ app.use("/", userRouter)
 app.use('/transaction', transactionRouter)
 app.use("/account", router)
 
- 
+ app.use((err, req, res, next) => {
+  if (err.type === 'entity.parse.failed') {
+    console.error("Failed to parse JSON body:", err);
+    return res.status(400).json({ status: 400, message: "Invalid JSON in request body" });
+  }
+  next(err);
+});
 
 
 app.listen(port, ()=>{
