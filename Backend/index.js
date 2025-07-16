@@ -8,6 +8,8 @@ const cookieParser = require('cookie-parser');
 const router = require('./Controller/verify.controller');
 const transactionRouter = require('./Routes/transaction.route');
 
+app.set('trust proxy', 1);
+
 app.use(cors({
   origin: ["https://demot-bank-app-dot.vercel.app","http://localhost:5173",],  
   credentials: true
