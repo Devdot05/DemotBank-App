@@ -27,10 +27,10 @@ const UserSignup = () => {
     const register_url = "https://demotbank-app-1.onrender.com/user/register"
     const formik = useFormik({
         initialValues: {
-            fullName: '',
-            email: '',
-            phoneNumber: '',
-            password: '',
+            fullName: "",
+            email: "",
+            phoneNumber: "",
+            password: "",
             
         },
 
