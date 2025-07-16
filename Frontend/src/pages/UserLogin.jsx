@@ -14,7 +14,7 @@ const UserLogin = () => {
     const [currentUserId, setCurrentUserId] = useState(null)
     
     const navigate = useNavigate()
-    const login_url = "https://demotbank-app-1.onrender.com/login"
+    const login_url = "https://demotbank-app-1.onrender.com/user/login"
 
     const user = JSON.parse(localStorage.getItem('users'))
     console.log(user);

@@ -18,7 +18,10 @@ app.use(express.json())
 app.use(cookieParser())
 app.use(express.urlencoded({extended: true}))
 
-app.use("/", userRouter)
+app.use("/", (req, res)=> {
+  res.send('Welcome to backend')
+})
+app.use("/user", userRouter)
 app.use('/transaction', transactionRouter)
 app.use("/account", router)
 
@@ -28,7 +31,7 @@ app.use("/account", router)
     return res.status(400).json({ status: 400, message: "Invalid JSON in request body" });
   }
   next(err);
-});
+}); 
 
 
 app.listen(port, ()=>{

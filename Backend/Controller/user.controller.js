@@ -65,8 +65,10 @@ const register = async (req,res) => {
 }
 
 const login = (req, res) => {
+    console.log(req.body);
+    
   const { email, password } = req.body;
-
+    ;
   userModel.findOne({ email })
     .then(user => {
       if (!user) return res.status(404).json({ message: "User not found" });

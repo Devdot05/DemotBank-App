@@ -24,7 +24,7 @@ const UserSignup = () => {
     let number = new RegExp(`(?=.*[0-9])`)
     let length = new RegExp(`(?=.{8,})`)
 
-    const register_url = "https://demotbank-app-1.onrender.com/register"
+    const register_url = "https://demotbank-app-1.onrender.com/user/register"
     const formik = useFormik({
         initialValues: {
             fullName: '',
