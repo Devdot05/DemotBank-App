@@ -36,7 +36,7 @@ const UserSignup = () => {
 
         onSubmit: (values) =>{
             console.log(values);
-            axios.post(register_url, values)
+            axios.post(register_url, values, {withCredentials: true})
             .then((res)=>{
                 setLoading(true)
                 console.log(res);
@@ -62,11 +62,12 @@ const UserSignup = () => {
         },
 
         validationSchema: yup.object({
-            fullName: yup.string().matches(/^[a-z ,.'-]+$/i,"Must be at least 2 characters").required("Full Name is required"),
-            phoneNumber: yup.string().matches(/^0\d{10}$/,"Must be a valid phone number").required("Phone number is required"),
-            email: yup.string().email("Must be a valid email").required("email is require"),
+            fullName: yup.string().transform(value => value.trim()).matches(/^[a-z ,.'-]+$/i,"Must be at least 2 characters").required("Full Name is required"),
+            phoneNumber: yup.string().transform(value => value.trim()).matches(/^0\d{10}$/,"Must be a valid phone number").required("Phone number is required"),
+            email: yup.string().transform(value => value.trim()).email("Must be a valid email").required("email is require"),
             password: yup
             .string()
+            .transform(value => value.trim())
             .matches(lower, "Must contain lower case letter")
             .matches(upper, "Must contain upper case letter")
             .matches(number, "Must contain number")

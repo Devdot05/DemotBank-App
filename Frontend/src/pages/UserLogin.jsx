@@ -40,7 +40,7 @@ const UserLogin = () => {
                         fullName: res.data.user.fullName,
                         email: res.data.user.email,
                         phone_number: res.data.user.phoneNumber,
-                        userId: res.data.user._id 
+                        userId: res.data.user.id 
                     }
 
                     localStorage.setItem('users', JSON.stringify(user))
