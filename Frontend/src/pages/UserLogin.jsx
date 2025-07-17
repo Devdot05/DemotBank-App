@@ -60,8 +60,8 @@ const UserLogin = () => {
                 }
             })
             .catch((err)=>{
-                if(err.response.status == 402)
-                    console.log(err.response.data.message);
+                if(err)
+                    console.log("Axios error, How can work now",err.response.data.message);
                 setMessage(err.response.data.message);
                 
             })
