@@ -85,9 +85,9 @@ const login = (req, res) => {
         );
 
         res.cookie("token", token, {
-          httpOnly: false,
-          secure: false,
-          sameSite: "Lax",
+          httpOnly: true,
+          secure: true,
+          sameSite: "none",
           maxAge: 3600000,
           path: "/",
         });
