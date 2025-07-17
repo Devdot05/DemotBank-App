@@ -5,7 +5,7 @@ const verifyToken = require("../Middleware/verifyToke")
 
 
 userRouter.post("/register", register)
-userRouter.post("/login",verifyToken, login)
-userRouter.get('/me', verifyToken, getToken)
+userRouter.post("/login",login)
+userRouter.get('/me', getToken)
 
 module.exports = userRouter
