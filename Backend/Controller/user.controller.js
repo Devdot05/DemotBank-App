@@ -75,7 +75,7 @@ const login = (req, res) => {
 
       user.validatePassword(password, (err, same) => {
         if (err || !same) {
-          return res.status(401).json({ message: "Invalid credentials" });
+          return res.status(401).json({ message: "Invalid email or password" });
         }
 
         const token = jwt.sign(
