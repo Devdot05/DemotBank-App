@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import '../css/side';
+import '../css/sidebar.css';
 import Navbar from './Navbar';
 import { Link } from 'react-router-dom';
 
