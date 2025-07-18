@@ -6,7 +6,7 @@
 
 .background2{
     /* background-image:linear-gradient(rgba(188, 61, 61, 0.5), url("public/bg 1.jpeg")); */
-    background-image: linear-gradient(rgba(23, 15, 93, 0.68) , rgba(9, 6, 101, 0.3)), url("images/bank-4.jpg");
+    background-image: linear-gradient(rgba(23, 15, 93, 0.68) , rgba(9, 6, 101, 0.3)), url(https://res.cloudinary.com/dlkytw4he/image/upload/v1752865256/bg_1_vx7gxb.jpg);
 
     background-repeat: no-repeat;
     background-size: cover;
@@ -16,7 +16,7 @@
 }
 .background{
     
-    background-image: linear-gradient(rgba(23, 15, 93, 0.68) , rgba(9, 6, 101, 0.3)), url(https://tse1.mm.bing.net/th/id/OIP.4rX5vDtjCvuPwZJdzR70DgHaNK?pid=ImgDet&w=178&h=315&c=7&dpr=1.5&o=7&rm=3);
+    background-image: linear-gradient(rgba(23, 15, 93, 0.68) , rgba(9, 6, 101, 0.3)), url(https://res.cloudinary.com/dlkytw4he/image/upload/v1752865256/bg_1_vx7gxb.jpg);
 
     background-repeat: no-repeat;
     background-size: cover;
@@ -37,7 +37,7 @@
 
 .bg{
     padding: 20px 10px;
-    background-image: url("images/bank-5.jpg");
+    background-image: url(https://res.cloudinary.com/dlkytw4he/image/upload/v1752866252/bg_2_p0ykft.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     border-top-left-radius: 30px;
