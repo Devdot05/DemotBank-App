@@ -35,7 +35,7 @@ const TransferForm = ({ fromAccountNumber, onTransactionComplete, onClose }) => 
       console.log(res);
       
     } catch (err) {
-      alert('Invalid account number');
+      alert('Invalid account number', "Can't transfer to an external bank");
       console.log(err);
       
     }
@@ -45,7 +45,7 @@ const TransferForm = ({ fromAccountNumber, onTransactionComplete, onClose }) => 
   const handleTransfer = async () => {
     setLoading(true);
     try {
-      const res = await axios.post('http://localhost:7500/transaction/transfer', 
+      const res = await axios.post('https://demotbank-app-1.onrender.com/transaction/transfer', 
         {
           userId,
           fromAccountNumber,
