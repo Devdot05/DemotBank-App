@@ -132,7 +132,7 @@ const TransferForm = ({ fromAccountNumber, onTransactionComplete, onClose }) => 
             <div>
               <p><strong>Recipient:</strong> {recipientName}</p>
               <p><strong>To Account:</strong> {formData.toAccountNumber}</p>
-              <p><strong>Amount:</strong> ${formData.amount}</p>
+              <p><strong>Amount:</strong> ₦{formData.amount}</p>
               <p><strong>Description:</strong> {formData.description}</p>
 
               <button onClick={handleTransfer} className="btn btn-success me-2" disabled={loading}>

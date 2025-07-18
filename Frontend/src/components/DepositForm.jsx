@@ -94,7 +94,7 @@ const DepositForm = ({ toAccountNumber, onTransactionComplete, onClose }) => {
           exit={{ opacity: 0 }}
         >
           <p><strong>Deposit To:</strong> {toAccountNumber}</p>
-          <p><strong>Amount:</strong> ${formData.amount}</p>
+          <p><strong>Amount:</strong> ₦{formData.amount}</p>
           <p><strong>Description:</strong> {formData.description}</p>
 
           <button onClick={handleDeposit} className="btn btn-success me-2" disabled={loading}>
