@@ -1,8 +1,8 @@
 import React from 'react'
-import Navbar from './components/Navbar'
-import './css/Layout.css'
+import Navbar from '../components/Navbar'
+import '../css/Layout.css'
 import { Link } from 'react-router-dom';
-import Nav from './components/Nav';
+import Nav from '../components/Nav';
 
 const Layout = () => {
   return (
