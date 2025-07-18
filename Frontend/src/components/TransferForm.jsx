@@ -134,11 +134,12 @@ const TransferForm = ({ fromAccountNumber, onTransactionComplete, onClose }) => 
               <p><strong>To Account:</strong> {formData.toAccountNumber}</p>
               <p><strong>Amount:</strong> ₦{formData.amount}</p>
               <p><strong>Description:</strong> {formData.description}</p>
-
-              <button onClick={handleTransfer} className="btn btn-success me-2" disabled={loading}>
-                {loading ? 'Processing...' : 'Confirm Transfer'}
-              </button>
-              <button onClick={() => setStep('form')} className="btn btn-secondary">Back</button>
+              <div className='d-flex justify-content-end gap-2'>
+                <button onClick={() => setStep('form')} className="btn btn-secondary">Back</button>
+                <button onClick={handleTransfer} className="btn btn-success" disabled={loading}>
+                  {loading ? 'Processing...' : 'Confirm Transfer'}
+                </button>
+              </div>
             </div>
           </motion.div>
         )}
