@@ -4,17 +4,6 @@
     box-sizing: border-box;
 }
 
-.background{
-    /* background-image:linear-gradient(rgba(188, 61, 61, 0.5), url("public/bg 1.jpeg")); */
-    background-image: linear-gradient(rgba(23, 15, 93, 0.68) , rgba(9, 6, 101, 0.3)), url("images/bank-4.jpg");
-
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 30px 0px;
-    /* height: 100vh; */
-
-}
-
 .background2{
     /* background-image:linear-gradient(rgba(188, 61, 61, 0.5), url("public/bg 1.jpeg")); */
     background-image: linear-gradient(rgba(23, 15, 93, 0.68) , rgba(9, 6, 101, 0.3)), url("images/bank-4.jpg");
@@ -25,6 +14,17 @@
     /* height: 100vh; */
 
 }
+.background{
+    
+    background-image: linear-gradient(rgba(23, 15, 93, 0.68) , rgba(9, 6, 101, 0.3)), url(https://tse1.mm.bing.net/th/id/OIP.4rX5vDtjCvuPwZJdzR70DgHaNK?pid=ImgDet&w=178&h=315&c=7&dpr=1.5&o=7&rm=3);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px 0px;
+   
+
+}
+
 
 
 .row{

@@ -96,7 +96,7 @@ const UserSignup = () => {
                 <div className='col-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 bg rounded-5 text-center d-none d-md-block'>
                     <div className='bg-2 rounded-5'>
                         <h2>Get a Demo Account</h2>
-                        <p>to signup, please type in the necessary details beside</p>
+                        <p>to signup, please type in necessary details when needed</p>
                     </div>
                 </div>
                 <form action="" onSubmit={formik.handleSubmit} className='col-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 py-2 form rounded-5'>
