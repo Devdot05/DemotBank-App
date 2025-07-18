@@ -226,8 +226,10 @@ const Dashboard = () => {
 
           <div className="">
           {loading ? (
-            <div class="spinner-border text-dark" role="status">
-            <span class="visually-hidden">Loading...</span>
+            <div className='text-center'>
+              <div class="spinner-border text-dark" role="status">
+              <span class="visually-hidden">Loading...</span>
+              </div>
             </div>
 
           ): getRecent.length === 0 ? (
@@ -409,9 +411,11 @@ const Dashboard = () => {
 
           <div className="">
           {loading ? (
-             <div class="spinner-border text-dark" role="status">
-              <span class="visually-hidden">Loading...</span>
-              </div>
+            <div className='text-center'>
+              <div class="spinner-border text-dark" role="status">
+                <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
           ): getRecent.length === 0 ? (
             <p>No transaction yet</p>
 

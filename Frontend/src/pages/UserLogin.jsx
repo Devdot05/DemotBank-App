@@ -19,7 +19,7 @@ const UserLogin = () => {
     const user = JSON.parse(localStorage.getItem('users'))
     console.log(user);
     
-    // const userId = user.userId
+    const userId = user.userId
     const formik = useFormik({
         initialValues: {
             email: "",
@@ -29,13 +29,13 @@ const UserLogin = () => {
 
         onSubmit: (values) =>{
             console.log(values);
+            setLoading(true)
             axios.post(login_url, values , {
                 withCredentials: true
             })
             .then((res)=>{
                 console.log(res);
                 if(res.status == 200){
-                    setLoading(true)
                     console.log("user found", res);
                     localStorage.tokens = res.data.token
                     let user = {
@@ -50,7 +50,7 @@ const UserLogin = () => {
                     
                     setProfile(res.data.user.fullName)
                     setTimeout(() => {
-                        navigate(`/dashboard/${currentUserId}`)
+                        navigate(`/dashboard/${userId}`)
                         setLoading(false)
                         
                     }, 1000);
@@ -63,7 +63,7 @@ const UserLogin = () => {
                 if(err)
                     console.log("Axios error, How can work now",err.response.data.message);
                 setMessage(err.response.data.message);
-                
+                setLoading(false)
             })
             
         },  
@@ -83,8 +83,8 @@ const UserLogin = () => {
                     <div className='row col-xl-9 col-xxl-9 col-lg-9 col-md-10 col-11  rounded-5 mx-auto shadow'>
                         <div className='d-none d-md-block col-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 bg rounded-5 text-center'>
                             <div className='bg-2 rounded-5'>
-                                <h2>Get a Demo Account</h2>
-                                <p>to signup, please type in the necessary details below</p>
+                                <h2>Get Demot Account</h2>
+                                <p>to signup, please type in the necessary details when needed</p>
                             </div>
                         </div>
                         <form action="" onSubmit={formik.handleSubmit} className='col-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 py-4'>

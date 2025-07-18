@@ -35,10 +35,10 @@ const UserSignup = () => {
         },
 
         onSubmit: (values) =>{
+            setLoading(true)
             console.log(values);
             axios.post(register_url, values, {withCredentials: true})
             .then((res)=>{
-                setLoading(true)
                 console.log(res);
                 
                 if(res.data.status === 400) {
@@ -56,7 +56,7 @@ const UserSignup = () => {
             }).catch((err)=>{
                 console.log(err, 'error occur');
                 setMessage(err.response.data.message)
-                
+                setLoading(false)
             })
             
         },
@@ -95,7 +95,7 @@ const UserSignup = () => {
                
                 <div className='col-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 bg rounded-5 text-center d-none d-md-block'>
                     <div className='bg-2 rounded-5'>
-                        <h2>Get a Demo Account</h2>
+                        <h2>Get Demot Account</h2>
                         <p>to signup, please type in necessary details when needed</p>
                     </div>
                 </div>

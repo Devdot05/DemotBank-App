@@ -71,7 +71,7 @@ const login = (req, res) => {
     ;
   userModel.findOne({ email })
     .then(user => {
-      if (!user) return res.status(404).json({ message: "User not found" });
+      if (!user) return res.status(404).json({ message: "Invalid email or password" });
 
       user.validatePassword(password, (err, same) => {
         if (err || !same) {

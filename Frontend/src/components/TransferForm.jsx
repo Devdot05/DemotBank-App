@@ -35,7 +35,7 @@ const TransferForm = ({ fromAccountNumber, onTransactionComplete, onClose }) => 
       console.log(res);
       
     } catch (err) {
-      alert('Invalid account number', "Can't transfer to an external bank");
+      alert("Invalid account number, Can't transfer to an external bank, You can only transfer within demot bank. Create more than one account to enjoy your transactions. Thank you!");
       console.log(err);
       
     }
