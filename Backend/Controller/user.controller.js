@@ -136,6 +136,6 @@ const getToken =  async (req, res) => {
         console.error("Error in /me route:", error);
         res.status(500).json({ message: "Server error" });
     }
-    }
+  }
 
 module.exports = {register, login, getToken}
