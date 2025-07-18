@@ -1,6 +1,6 @@
 import { useFormik } from 'formik'
 import React from 'react'
-import '../css/Signup.css'
+// import '../css/Signup.css'
 import axios from "axios"
 import * as yup from "yup"
 import { Link, useNavigate } from "react-router-dom"

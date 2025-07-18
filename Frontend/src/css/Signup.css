@@ -6,7 +6,7 @@
 
 .background{
     /* background-image:linear-gradient(rgba(188, 61, 61, 0.5), url("public/bg 1.jpeg")); */
-    background-image: linear-gradient(rgba(23, 15, 93, 0.68) , rgba(9, 6, 101, 0.3)), url("images/bg 1.jpeg");
+    background-image: linear-gradient(rgba(23, 15, 93, 0.68) , rgba(9, 6, 101, 0.3)), url("images/bank-4.jpg");
 
     background-repeat: no-repeat;
     background-size: cover;
@@ -17,7 +17,7 @@
 
 .background2{
     /* background-image:linear-gradient(rgba(188, 61, 61, 0.5), url("public/bg 1.jpeg")); */
-    background-image: linear-gradient(rgba(23, 15, 93, 0.68) , rgba(9, 6, 101, 0.3)), url("images/bg 1.jpeg");
+    background-image: linear-gradient(rgba(23, 15, 93, 0.68) , rgba(9, 6, 101, 0.3)), url("images/bank-4.jpg");
 
     background-repeat: no-repeat;
     background-size: cover;
@@ -37,7 +37,7 @@
 
 .bg{
     padding: 20px 10px;
-    background-image: url("images/bg 2.jpeg");
+    background-image: url("images/bank-5.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     border-top-left-radius: 30px;
