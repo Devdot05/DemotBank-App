@@ -12,7 +12,7 @@ const AddModal = ({show, onClose, account}) => {
        withCredentials: true
     })
     .then((res)=>{
-      console.log(res.data);
+      // console.log(res.data);
       setTimeout(() => {
         setDetails(res.data.account)
         setUser(res.data.user)

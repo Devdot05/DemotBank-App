@@ -13,7 +13,7 @@ const DepositForm = ({ toAccountNumber, onTransactionComplete, onClose }) => {
   // console.log(token);
   
   const userId = user.userId
-  console.log(userId);
+  // console.log(userId);
   
   const handleChange = (e) => {
     setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
@@ -33,13 +33,13 @@ const DepositForm = ({ toAccountNumber, onTransactionComplete, onClose }) => {
         amount: Number(formData.amount),
         description: formData.description
       }
-      console.log(payload);
+      // console.log(payload);
       
       const res = await axios.post('https://demotbank-app-1.onrender.com/transaction/deposit', payload, {
         withCredentials: true
       }
         );
-      console.log(res);
+      // console.log(res);
       
       alert('Deposit successful ✅');
       onTransactionComplete();

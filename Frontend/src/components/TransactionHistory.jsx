@@ -16,8 +16,8 @@ const TransactionHistory = ({show, onClose, eachTransaction, currentUserId}) => 
         toAccountNumber,
          
     } = eachTransaction;
-        
-    console.log(eachTransaction);
+   
+    
     
     const date = new Date(createdAt).toLocaleString();
     const isSender = fromUser?._id?.toString() === currentUserId?.toString();
@@ -27,7 +27,7 @@ const TransactionHistory = ({show, onClose, eachTransaction, currentUserId}) => 
     switch(type) {
       case 'transfer':
       if (isSender) {
-        console.log(isSender);
+        // console.log(isSender);
         message = `Transfer to ${toUser?.fullName ?? 'unknown user'}`;
         // amount = `-${tx.amount} `;
       } else if (isReceiver) {

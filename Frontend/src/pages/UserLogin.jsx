@@ -17,7 +17,7 @@ const UserLogin = () => {
     const login_url = "https://demotbank-app-1.onrender.com/login"
 
     const user = JSON.parse(localStorage.getItem('users'))
-    console.log(user);
+    // console.log(user);
     
     
     const formik = useFormik({
@@ -28,15 +28,15 @@ const UserLogin = () => {
         },
 
         onSubmit: (values) =>{
-            console.log(values);
+            // console.log(values);
             setLoading(true)
             axios.post(login_url, values , {
                 withCredentials: true
             })
             .then((res)=>{
-                console.log(res);
+                // console.log(res);
                 if(res.status == 200){
-                    console.log("user found", res);
+                    // console.log("user found", res);
                     localStorage.tokens = res.data.token
                     let user = {
                         fullName: res.data.user.fullName,
@@ -84,7 +84,7 @@ const UserLogin = () => {
                         <div className='d-none d-md-block col-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 bg rounded-5 text-center'>
                             <div className='bg-2 rounded-5'>
                                 <h2>Get Demot Account</h2>
-                                <p>to signup, please type in the necessary details when needed</p>
+                                <p>To signin, please type in the necessary details when needed</p>
                             </div>
                         </div>
                         <form action="" onSubmit={formik.handleSubmit} className='col-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 py-4'>
@@ -110,7 +110,9 @@ const UserLogin = () => {
                                 <a href="#" className='text-decoration-none'>forget password?</a>
                             </div>
                             <button className='btn btn-success mt-4 w-100' type='submit'>Login</button>
-                            <small>Not have an account before <a href="/signup">Signup up here</a></small>
+                            <div className='text-center'>
+                                <small>Don't have an account before <a href="/signup" className='text-decoration-none fs-6'>Signup up</a></small>
+                            </div>
                         </form>
                     </div>
                 </section>

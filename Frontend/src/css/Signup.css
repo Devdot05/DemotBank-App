@@ -11,7 +11,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     padding: 50px 0px;
-    /* height: 100vh; */
+    height: 100vh;
 
 }
 .background{
@@ -21,6 +21,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     padding: 30px 0px;
+    
    
 
 }
@@ -46,13 +47,16 @@
 
 .bg-2{
     background-color: rgba(0, 0, 0, 0.4);
-    padding: 200px 50px;
+    padding: 150px 50px;
     color: white;
 }
 
-.form{
-    height: 95vh;
-    overflow-y: auto;
+@media (min-width:768px) {
+    .form{
+        height: 90vh;
+        overflow-y: auto;
+    }
+    
 }
 
 .bg-col{
@@ -60,10 +64,15 @@
     backdrop-filter: blur(10px);
 }
 
-@media (max-width:460px) {
+@media (max-width:767.99px) {
     
 .background2{
     padding: 150px 0px;
+    height: 100vh;
+
+}
+.background{
+    /* padding: 150px 0px; */
     height: 100vh;
 
 }

@@ -16,10 +16,10 @@ const AllTransaction = () => {
     const url = 'https://demotbank-app-1.onrender.com/transaction/transactions'
     useEffect(()=> {
         setLoading(true)
-        console.log(currentUserId);
+        // console.log(currentUserId);
         axios.get(url, {withCredentials: true})
         .then((res)=>{
-            console.log(res);
+            // console.log(res);
             setTimeout(() => {
               setLoading(false)
               setTransaction(res.data)
@@ -77,7 +77,7 @@ const AllTransaction = () => {
             switch (tx.type) {
               case 'transfer':
                 if (isSender) {
-                  console.log(isSender);
+                  // console.log(isSender);
                   message = `You transfer to ${to?.fullName.slice(0,4) + '.....' ?? 'unknown user'}`;
                   amount = `-${tx.amount} `;
                 } else if (isReceiver) {

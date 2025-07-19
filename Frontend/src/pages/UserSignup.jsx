@@ -39,13 +39,13 @@ const UserSignup = () => {
             console.log(values);
             axios.post(register_url, values, {withCredentials: true})
             .then((res)=>{
-                console.log(res);
+                // console.log(res);
                 
                 if(res.data.status === 400) {
                     console.log(res.data.message);
                     setMessage(res.data.message)
                 }else{
-                    console.log(res);
+                    // console.log(res);
                     setTimeout(() => {
                         navigate('/login')
                         setLoading(false)
@@ -91,22 +91,22 @@ const UserSignup = () => {
             <div className='mb-2 col-2 text-end'>
                 <Link to={'/'} className='nav-link text-light'><ArrowBackIcon/></Link>
             </div>
-            <div className='row col-xl-9 col-xxl-9 col-lg-9 col-md-10 col-11 col-sm-11 rounded-5 mx-auto shadow '>
+            <div className='row col-xl-9 col-xxl-9 col-lg-9 col-md-10 col-11 col-sm-11 rounded-5 mx-auto shadow'>
                
                 <div className='col-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 bg rounded-5 text-center d-none d-md-block'>
-                    <div className='bg-2 rounded-5'>
+                    <div className='bg-2 rounded-5 mt-4'>
                         <h2>Get Demot Account</h2>
-                        <p>to signup, please type in necessary details when needed</p>
+                        <p>To signup, please type in necessary details when needed</p>
                     </div>
                 </div>
-                <form action="" onSubmit={formik.handleSubmit} className='col-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 py-2 form rounded-5'>
+                <form action="" onSubmit={formik.handleSubmit} className='col-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 py-2 form rounded-5 bg-light'>
                     <h2 className='text-center pt-3'>Register your account </h2>
                     <p className='text-danger'>{message}</p>
                     <div>
                         <label htmlFor="" className='mt-3'>Full Name</label> 
                         <input
                             type="text"
-                            placeholder='FirstName and LastName'
+                            placeholder='First name & Last name'
                             className={formik.errors.fullName ? "is-invalid form-control  shadow-none" : "form-control  shadow-none" }
                             name='fullName'
                             onChange={formik.handleChange}
@@ -142,11 +142,11 @@ const UserSignup = () => {
                         />
                         {formik.touched.phoneNumber && <small className='text-danger'>{formik.errors.phoneNumber}</small>}
                     </div>
-                    <div>
+                    <div className=''>
                         <label htmlFor="" className='mt-3'>Password</label>
                         <input
                             type="text"
-                            placeholder='enter your password'
+                            placeholder='Create strong password'
                             className={formik.errors.password ? 'is-invalid form-control shadow-none' : "form-control shadow-none"}
                             name='password'
                             onChange={formik.handleChange}
@@ -154,8 +154,12 @@ const UserSignup = () => {
                             onBlur={formik.handleBlur}
                         />
                         {formik.touched.password && <small className='text-danger'>{formik.errors.password}</small>}
-                        <button className='btn btn-success mt-4 w-100' type='submit'>Submit</button>
-                        <small>Already have an account <a href="/login">Login here</a></small>
+                    </div>
+                    <div className='mb-3'>
+                        <button className='btn btn-success mt-4 w-100' type='submit'>Signup</button>
+                        <div className='text-center'>
+                            <small>Already have an account <a href="/login" className='text-decoration-none fs-6'>Login here</a></small>
+                        </div>
                     </div>
                 </form>
             </div>

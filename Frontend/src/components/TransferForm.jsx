@@ -32,7 +32,7 @@ const TransferForm = ({ fromAccountNumber, onTransactionComplete, onClose }) => 
       const res = await axios.get(`https://demotbank-app-1.onrender.com/account/verify/${formData.toAccountNumber}`);
       setRecipientName(res.data.fullName);
       setStep('confirm');
-      console.log(res);
+      // console.log(res);
       
     } catch (err) {
       alert("Invalid account number, Can't transfer to an external bank, You can only transfer within demot bank. Create more than one account to enjoy your transactions. Thank you!");
@@ -60,7 +60,7 @@ const TransferForm = ({ fromAccountNumber, onTransactionComplete, onClose }) => 
       const data = res.data.transaction
       let txId = data._id
       localStorage.setItem('txId', JSON.stringify(txId))
-      console.log(txId);
+      // console.log(txId);
 
       alert('Transfer successful');
       onTransactionComplete();  // Refresh balance

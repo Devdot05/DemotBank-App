@@ -59,7 +59,7 @@ const Dashboard = () => {
   useEffect(()=>{
     // console.log(close);
     const txId = JSON.parse(localStorage.getItem('txId'))
-    console.log(txId);
+    // console.log(txId);
     
      fetchAccount()
      fetchRecentTransaction()
@@ -70,7 +70,7 @@ const Dashboard = () => {
       withCredentials: true
      })
     .then((res)=>{
-      console.log(res);
+       
       setAccount(res.data.account)
       setCurrentUserId(res.data.user.id)
       
@@ -89,7 +89,7 @@ const Dashboard = () => {
 
   const close = () => {
     setShowDetails(false)
-    console.log(showDetails);
+    // console.log(showDetails);
     
   }
     //To make the balance update in fronted
@@ -102,7 +102,7 @@ const Dashboard = () => {
     setLoading(true)
     axios.get(`https://demotbank-app-1.onrender.com/transaction/recent`, {withCredentials: true})
     .then((res)=> {
-      console.log(res);
+       
       setTimeout(() => {
         setGetRecent(res.data)
         setLoading(false)
@@ -121,7 +121,7 @@ const Dashboard = () => {
   const handleShowTransaction = (tx) => {
     setShowTransaction(true)
     setSelectedTransaction(tx);
-    console.log(showTransaction);
+    // console.log(showTransaction);
     
   }
 
@@ -192,8 +192,8 @@ const Dashboard = () => {
               <p>Total Balance</p>
             </div>
             {loading ? (
-              <div class="spinner-border text-light" role="status">
-              <span class="visually-hidden">Loading...</span>
+              <div className="spinner-border text-light" role="status">
+              <span className="visually-hidden">Loading...</span>
               </div>
             ): 
             (

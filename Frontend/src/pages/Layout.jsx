@@ -7,8 +7,7 @@ import Nav from '../components/Nav';
 const Layout = () => {
   return (
     <>
-      <div className=''>
-      </div>
+      
         <Navbar/>
       <main className='container-fluid bg-black'>
           <div className="row section bg-black text-light">
@@ -20,7 +19,7 @@ const Layout = () => {
                 <p className='fs-4 me-3'>Experience seamless banking with demot. Manage your finances effortlessly, no matter where you are all over the world</p>
               </div>
               <div className='mb-3'>
-                <button className='btn btn-success'><Link to={'signup'} className='nav-link'>Bank Now</Link></button>
+                <button className='btn btn-success'><Link to={'login'} className='nav-link'>Bank Now</Link></button>
               </div>
             </div>
             <div id="carouselExampleAutoplaying" class="carousel slide carousel-fade col-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6" data-bs-ride="carousel">
@@ -81,7 +80,7 @@ const Layout = () => {
           </div>
      
 
-          <div className="row text-white my-5 py-5 px-3" style={{backgroundColor:' #0D0CB5'}}>
+          <div className="row text-white mt-5 py-5 px-3" style={{backgroundColor:' #0D0CB5'}}>
             <div className="col-12 text-center">
               <h2 className='font'>Manage Financial Effortlessly</h2>
             </div>
@@ -128,6 +127,11 @@ const Layout = () => {
             
           </div>
       </main>
+      <footer className='bg-black text-light text-center'>
+        <div className='pt-3 pb-1'>
+          <p>Copyright © 2025 Codithy. All rights reserved.</p>
+        </div>
+      </footer>
     
     </>
   )
