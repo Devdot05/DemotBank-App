@@ -19,7 +19,7 @@ const UserLogin = () => {
     const user = JSON.parse(localStorage.getItem('users'))
     console.log(user);
     
-    const userId = user.userId
+    
     const formik = useFormik({
         initialValues: {
             email: "",
@@ -47,7 +47,7 @@ const UserLogin = () => {
                     setCurrentUserId(res.data.user.id)
 
                     localStorage.setItem('users', JSON.stringify(user))
-                    
+                    let userId = user.userId
                     setProfile(res.data.user.fullName)
                     setTimeout(() => {
                         navigate(`/dashboard/${userId}`)

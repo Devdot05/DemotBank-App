@@ -99,7 +99,7 @@ const DepositForm = ({ toAccountNumber, onTransactionComplete, onClose }) => {
 
           <div className='d-flex justify-content-end gap-2'>
             <button onClick={() => setStep('form')} className="btn btn-secondary">Back</button>
-            <button onClick={handleDeposit} className="btn btn-success me-2" disabled={loading}>
+            <button onClick={handleDeposit} className="btn btn-primary me-2" disabled={loading}>
               {loading ? 'Processing...' : 'Confirm Deposit'}
             </button>
           </div>

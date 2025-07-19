@@ -188,6 +188,9 @@ const Dashboard = () => {
         </div>
         <div className='row bg-info rounded-4 p-4 col-lg-12 col-xl-9 col-xxl-9'>
           <div className="col-8">
+            <div className="col-6 col-sm-8">
+              <p>Total Balance</p>
+            </div>
             {loading ? (
               <div class="spinner-border text-light" role="status">
               <span class="visually-hidden">Loading...</span>

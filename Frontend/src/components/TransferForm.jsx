@@ -115,7 +115,7 @@ const TransferForm = ({ fromAccountNumber, onTransactionComplete, onClose }) => 
                 onChange={handleChange}
               />
               </div>
-            <button type="submit" className="btn btn-primary" disabled={loading}>
+            <button type="submit" className="btn btn-success" disabled={loading}>
               {loading ? 'Verifying...' : 'Next'}
             </button>
              

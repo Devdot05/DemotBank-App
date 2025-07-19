@@ -91,7 +91,7 @@ const WithdrawForm = ({ fromAccountNumber, onTransactionComplete, onClose }) => 
           <p><strong>Description:</strong> {formData.description}</p>
           <div className='d-flex justify-content-end gap-2'>
             <button onClick={() => setStep('form')} className="btn btn-secondary">Back</button>
-            <button onClick={handleWithdraw} className="btn btn-success me-2" disabled={loading}>
+            <button onClick={handleWithdraw} className="btn btn-warning me-2" disabled={loading}>
               {loading ? 'Processing...' : 'Confirm Withdrawal'}
             </button>
           </div>
