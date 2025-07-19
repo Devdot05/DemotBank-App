@@ -16,6 +16,7 @@ import Goal from './pages/Goal'
 import Investment from './pages/Investment'
 import About from './pages/About'
 import Contact from './pages/Contact'
+import ProtectedRoute from './components/ProtectedRoute'
 function App() {
   const [count, setCount] = useState(0)
   const token = localStorage.tokens 
@@ -33,7 +34,7 @@ function App() {
           <Route path='/signup' element={<UserSignup/>}/>
           <Route path='/login' element={<UserLogin/>}/>
           <Route path='/' element={ <Navigate to = '/login'/>}/>
-          <Route path='/dashboard/:id' element={token ? <Dashboard/> : <Navigate to = "/login"/>}/>
+          <Route path='/dashboard/:id' element={<ProtectedRoute><Dashboard/></ProtectedRoute>}/>
           <Route path='/allTransaction/:currentUserId' element={<AllTransaction/>}/>
           <Route path='/goal' element={<Goal/>}/>
           <Route path='/investment' element={<Investment/>}/>

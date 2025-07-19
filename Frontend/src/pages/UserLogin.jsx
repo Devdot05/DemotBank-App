@@ -64,6 +64,8 @@ const UserLogin = () => {
                     console.log("Axios error, How can work now",err.response.data.message);
                 setMessage(err.response.data.message);
                 setLoading(false)
+                console.log(err);
+                
             })
             
         },  
@@ -73,8 +75,8 @@ const UserLogin = () => {
     <>
             {loading? (
                 <div className='text-center background vh-100' style={{paddingTop: "300px"}}>
-                    <div class="spinner-border text-light" role="status">
-                    <span class="visually-hidden">Loading...</span>
+                    <div className="spinner-border text-light" role="status">
+                    <span className="visually-hidden">Loading...</span>
                     </div>
                 </div>
             ):
