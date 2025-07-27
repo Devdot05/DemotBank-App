@@ -145,7 +145,7 @@ const UserSignup = () => {
                     <div className=''>
                         <label htmlFor="" className='mt-3'>Password</label>
                         <input
-                            type="text"
+                            type="password"
                             placeholder='Create strong password'
                             className={formik.errors.password ? 'is-invalid form-control shadow-none' : "form-control shadow-none"}
                             name='password'
