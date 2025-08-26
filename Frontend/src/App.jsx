@@ -36,8 +36,8 @@ function App() {
           <Route path='/' element={ <Navigate to = '/login'/>}/>
           <Route path='/dashboard/:id' element={<ProtectedRoute><Dashboard/></ProtectedRoute>}/>
           <Route path='/allTransaction/:currentUserId' element={<AllTransaction/>}/>
-          <Route path='/goal' element={<Goal/>}/>
-          <Route path='/investment' element={<Investment/>}/>
+          <Route path='/goal/:id' element={<Goal/>}/>
+          <Route path='/investment/:id' element={<Investment/>}/>
           <Route path='/about' element={<About/>}/>
           <Route path='/contact' element={<Contact/>}/>
           {/* <Route path='/user/ :id' element={<user/>}/> */}

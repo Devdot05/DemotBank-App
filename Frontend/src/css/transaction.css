@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.trans{
+    padding:70px  0 0 90px;
+}
+
+.sidb{
+     transition: move transform 0.3s ease-in-out;
+}
+
+.mbtn{
+    padding-right:16px ;
+}
+
+ 
+
+@media (max-width: 900px) {
+    .trans{
+        padding:50px  20px 0 100px;
+    }
+}
+@media (max-width: 767px) {
+    .trans{
+        padding:50px  20px 0 30px;
+    }
+}

@@ -10,7 +10,7 @@ const transactionRouter = require('./Routes/transaction.route');
 
 
 app.use(cors({
-  origin: ["https://demot-bank-app-dot.vercel.app","http://localhost:5173",],  
+  origin: ["https://demot-bank-app-dot.vercel.app","http://localhost:5173"],  
   credentials: true
 }));
 app.set('trust proxy', 1);

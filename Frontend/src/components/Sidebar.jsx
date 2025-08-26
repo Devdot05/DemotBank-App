@@ -10,8 +10,10 @@ const Sidebar = ({userId}) => {
     //     setExpanded(!expanded);
     // };
 
-    const user = JSON.parse(localStorage.getItem("users"))
+    // const user = JSON.parse(localStorage.getItem("users"))   
     // const userId = user.userId
+    // console.log(userId);
+    
     
 
     return (
@@ -21,8 +23,8 @@ const Sidebar = ({userId}) => {
                 <h3>Menu</h3>
                 <Link to={`/dashboard/${userId}`} className='nav-link d-flex align-item-center mt-3 '>Dashboard</Link>
                 <Link to={`/allTransaction/${userId}`} className='nav-link d-flex align-item-center mt-3 '>Transaction</Link>
-                <Link to={`/goal`} className='nav-link d-flex align-item-center mt-3 '>My Goal</Link>
-                <Link to={`/investment`} className='nav-link d-flex align-item-center mt-3 '>Investment</Link>
+                <Link to={`/goal/${userId}`} className='nav-link d-flex align-item-center mt-3 '>My Goal</Link>
+                <Link to={`/investment/${userId}`} className='nav-link d-flex align-item-center mt-3 '>Investment</Link>
             </div>
             </div>
         </>

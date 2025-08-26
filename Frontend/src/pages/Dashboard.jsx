@@ -16,6 +16,7 @@ import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import TransactionHistory from '../components/TransactionHistory'
 import Nav from '../components/Nav'
 
+
 const Dashboard = () => {
   const credential = "https://demotbank-app-1.onrender.com/me"
 
@@ -315,6 +316,7 @@ const Dashboard = () => {
         showTransaction && selectedTransaction && (
         <TransactionHistory show={showTransaction} onClose={closeTx} currentUserId={currentUserId} getRecent={getRecent} eachTransaction = {selectedTransaction}/>
       )}
+    
           
 
 
@@ -397,11 +399,11 @@ const Dashboard = () => {
             {showDetails && (
           <AddModal  onClose={close}  show={showDetails}/>
         )}
-        {
-          showTransaction && selectedTransaction && (
+        {/* {
+          showTransaction && selectedTransaction && currentUserId && (
             <TransactionHistory show={showTransaction} onClose={closeTx} currentUserId={currentUserId} getRecent={getRecent} eachTransaction = {selectedTransaction}/>
           )
-        }
+        } */}
         {/* </div> */}
          
         <div>
@@ -488,6 +490,8 @@ const Dashboard = () => {
           </div>
         </div>
       </section>
+      
+      
          
     </>
   )

@@ -41,7 +41,7 @@ const AddModal = ({show, onClose, account}) => {
             <div className="modal-body">
               {loading ? (
                 <div className='text-center'>
-                <div class="spinner-border text-light" role="status">
+                <div class="spinner-border text-dark" role="status">
                   <span class="visually-hidden">Loading...</span>
                 </div>
                 </div>
